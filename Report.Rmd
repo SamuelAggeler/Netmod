@@ -11,7 +11,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-In this assignment we are going to analysis 
+In this assignment we are going to analyze the ties among 11 year old pupils when it comes to supporting each other during hard times.We want to see whether following hypothesis are supported by our model :
+1. Are pupils more likely to support someone that also supported them.
+2. Are pupil with the same gender more likely to support each other.
+
+```{r}
+library(sna)
+library(network)
+setwd("data/support/")
+
+support <- as.matrix(read.csv("support.csv", header = FALSE))
+attributes <- as.matrix(read.csv("attributes.csv"))
+```
 
 
 
